@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<style>
+		.control{
+			height: 150px;
+			width: 100px;
+		}
+	</style>
+	<script>
+		window.onload = function(){
+			var oDiv = document.getElementById('control');
+			var music = document.getElementById('audio');
+
+			oDiv.onclick = function(){
+				if(music.paused){
+					music.play();
+				}else{
+					music.pause();
+				}
+				var oeve = e || event;
+				oeve.stopPropagation();
+
+			}
+			
+		}
+	</script>
+</head>
+<body>
+	<div id="control">
+		<img src="5.jpg" alt="" />
+	</div>
+	<audio autoplay controls id="audio">
+		<!-- <source src="fade.oga"/> -->
+		<source src="fade.wav"/>
+		<!-- <source src="fade.mp3"/> -->
+		<source src="not.mp3"/>
+	</audio>
+</body>
+</html>
